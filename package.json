@@ -25,6 +25,7 @@
         "jsonwebtoken": "^9.0.0",
         "nodemon": "^2.0.20",
         "react-icons": "^4.4.0",
+        "react-router-dom": "^6.8.1",
         "stripe": "^9.2.0"
     }
 }
