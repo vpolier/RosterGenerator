@@ -1,0 +1,30 @@
+{
+    "name": "Roster-Generator",
+    "version": "1.0.0",
+    "description": "",
+    "main": "Api/index.js",
+    "scripts": {
+        "start": "node Api/index.js",
+        "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
+        "install": "cd server && npm i && cd ../client && npm i",
+        "build": "cd client && npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^5.1.0",
+        "express": "^4.17.1",
+        "mongoose": "^6.0.13"
+    },
+    "dependencies": {
+        "apollo-server": "^3.11.1",
+        "body-parser": "^1.20.0",
+        "cookie-parser": "^1.4.6",
+        "image-to-base64": "^2.2.0",
+        "jsonwebtoken": "^9.0.0",
+        "nodemon": "^2.0.20",
+        "react-icons": "^4.4.0",
+        "stripe": "^9.2.0"
+    }
+}
