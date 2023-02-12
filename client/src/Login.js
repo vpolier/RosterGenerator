@@ -18,10 +18,8 @@ export const Login = (props) => {
 	   const mutationResponse = await addUser({
 		   variables: {
 			 email: login_email,
-			 password: login_password,
-			 username: login_name,
-
-		   },
+			 password: login_password
+			},
 		 });
 		 const token = mutationResponse.data.addUser.token;
 		 Auth.login(token);

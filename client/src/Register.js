@@ -8,20 +8,18 @@ export const Register = (props) => {
     const [register_password, setPass] = useState('');
     const [register_name, setName] = useState('');
 
-    const [addUser, { error }] = useMutation(ADD_USER);
+    const [addUser] = useMutation(ADD_USER);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log(register_email);
-        console.log(register_password);
-        console.log(register_name);
-       
         // graphql call to register
         const mutationResponse = await addUser({
             variables: {
               email: register_email,
               password: register_password,
               fullname: register_name,
+
             },
           });
           const token = mutationResponse.data.addUser.token;
