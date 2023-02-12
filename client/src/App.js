@@ -7,10 +7,10 @@ import {
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import React, { useState } from "react";
-import { Header } from "./Header.js.js";
-import { Login } from "./Login.js.js";
+import { Header } from "./Header.js";
+import { Login } from "./Login.js";
 import { Register } from "./Register.js";
-import { Roster } from "./Roster.js.js";
+import { Roster } from "./Roster.js";
 import { AddShiftForm } from "./components/AddShiftForm.js";
 
 import Auth from './utils/auth';
@@ -19,8 +19,6 @@ const httpLink = createHttpLink({
   uri: '/graphql',
 });
 
-this.handleLogin = this.handleLogin.bind(this);
-this.handleLogout = this.handleLogout.bind(this);
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
