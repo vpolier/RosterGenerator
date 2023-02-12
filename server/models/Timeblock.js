@@ -4,7 +4,8 @@ const timeblockSchema = new Schema({
   date: {
     type: Date,
     required: true,
-  },shift: {
+  },
+  shift: {
     type: String,
     required: false,
     default: null

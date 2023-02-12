@@ -17,16 +17,14 @@ const userSchema = new Schema({
 
   title: {
   type: String,
-  required: true,
-},
+  required: false,
+  },
 
   password: {
     type: String,
     required: true,
     minlength: 5
-  },
-
- 
+  }
 });
 
 // set up pre-save middleware to create password
