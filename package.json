@@ -2,9 +2,9 @@
     "name": "RosterGenerator",
     "version": "1.0.0",
     "description": "",
-    "main": "Api/index.js",
+    "main": "server/server.js",
     "scripts": {
-        "start": "node Api/index.js",
+        "start": "node server/server.js",
         "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
         "install": "cd server && npm i && cd ../client && npm i",
         "build": "cd client && npm run build"
@@ -21,6 +21,7 @@
         "apollo-server": "^3.11.1",
         "body-parser": "^1.20.0",
         "cookie-parser": "^1.4.6",
+        "dotenv": "^16.0.3",
         "image-to-base64": "^2.2.0",
         "jsonwebtoken": "^9.0.0",
         "nodemon": "^2.0.20",
