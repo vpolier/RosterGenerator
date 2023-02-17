@@ -13,6 +13,21 @@ export const Roster = () => {
         //document.getElementById('add_shift').style.display = "flex";
         //$("#"+form_id).css("display","flex");
     }
+
+    let tds = [];
+    for (let index = 1; index < 15; index++) {
+        tds.push(
+        <td
+            className={`active_date ${index == 6 || index == 7 || index == 13 || index == 14 ? 'weekend' : ''}`}
+            id={index}
+            onClick={e => display_form(index)}
+        >
+
+        </td>
+        )
+        
+    }
+
     return (
         <div id="calendar">
             Roster starting: Jan 30
@@ -103,12 +118,12 @@ export const Roster = () => {
                     <td>
                         RN
                     </td>
+
+                    {tds}
                 
-                    <td className="active_date" id="1" onClick={e => display_form(1)}>
-                        
-                    </td>
                     
-                    <td className="active_date" id="2" onClick={e => display_form(2)}>
+                    
+                    {/* <td className="active_date" id="2" onClick={e => display_form(2)}>
                         
                     </td>
                     
@@ -158,7 +173,7 @@ export const Roster = () => {
                     
                     <td className="active_date weekend" onClick={display_form}>
                         
-                    </td>
+                    </td> */}
                     
                 </tr>
                 
